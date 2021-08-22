@@ -7,12 +7,12 @@ import (
 	"rsc.io/quote"
 )
 
-//func callGreetins(name string) {
+//func callGreetings(name string) {
 //	message := greetings.Hello(name)
 //	fmt.Println(message)
 //}
 
-func callGreetins(name string) {
+func callGreetings(name string) {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
@@ -29,7 +29,7 @@ func main() {
 
 	fmt.Println(quote.Hello())
 
-	callGreetins("Gladys")
+	callGreetings("Gladys")
 
-	callGreetins("")
+	callGreetings("")
 }
