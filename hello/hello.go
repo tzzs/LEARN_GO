@@ -24,12 +24,28 @@ func callGreetings(name string) {
 	fmt.Println(message)
 }
 
+func callNamesGreetings(names []string) {
+	log.SetPrefix("callNamesGreetings:")
+	log.SetFlags(0)
+
+	messages, err := greetings.Hellos(names)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(messages)
+}
+
 func main() {
 	fmt.Printf("Hello World!\n")
 
 	fmt.Println(quote.Hello())
 
-	callGreetings("Gladys")
+	//callGreetings("Gladys")
+	//
+	//callGreetings("")
 
-	callGreetings("")
+	names := []string{"Gladys", "samantha", "Darrin"}
+	callNamesGreetings(names)
 }
